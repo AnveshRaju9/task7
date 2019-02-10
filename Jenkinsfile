@@ -1,5 +1,3 @@
-node
-git credentialsId: 'fa32cd45-f67b-4197-817e-4d6af4f9a7de', url: 'https://github.com/AnveshRaju9/task7.git'
 pipeline {
   agent any
   stages {
