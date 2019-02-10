@@ -9,7 +9,7 @@ pipeline
     stage('FIRST-JOB')
     {
       steps { 
-        echo 'Building...'
+        echo 'https://github.com/AnveshRaju9/task7.git'
           }
     }
   }
@@ -20,7 +20,7 @@ stages {
   stage ('SECOND-JOB')
   {
     steps {
-      echo 'Building...'
+      echo 'https://github.com/AnveshRaju9/task7.git'
           }
   }
 }
