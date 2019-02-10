@@ -1,36 +1,27 @@
 pipeline 
 {
   agent any
+  triggers {
+       upstream 'firstjob, First-job'
+  }
   stages 
   {
-    stage "Build";
+    stage('FIRST-JOB')
     {
-        steps ('Starting Jobs')
-        {
-          build 'JobA'
-        }
-         steps ('Starting Sub Jobs') 
-        {
-           build 'JobB'
-        } 
-         steps ('Starting Sub Jobs') 
-        {
-          build 'JobC'
-        }
-    }
-    stage "Test";
-    {
-      steps('testt')
-      {
-        echo 'Testing..'
-      }
-    }
-    stage "Deploy";
-    {
-      steps 
-      {
-        echo 'Deploying....'
-      }
+      steps { 
+        echo 'Building...'
+          }
     }
   }
+triggers {
+       downstream 'secondjob, Second-job'
+}
+stages {
+  stage ('SECOND-JOB')
+  {
+    steps {
+      echo 'Building...'
+          }
+  }
+}
 }
