@@ -17,10 +17,10 @@ pipeline
         {
           build 'JobC'
         }
-  }
+    }
     stage('Test') 
     {
-      steps 
+      steps('testt')
       {
         echo 'Testing..'
       }
