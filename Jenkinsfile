@@ -4,9 +4,6 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      steps {
-        echo 'Building..'
-      }
         steps ('Starting Jobs'){
           build 'JobA'
         }
