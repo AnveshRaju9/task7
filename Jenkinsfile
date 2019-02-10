@@ -7,22 +7,15 @@ pipeline {
       steps {
         echo 'Building..'
       }
-      {
         steps ('Starting Jobs'){
           build 'JobA'
         }
-      }
-      {
           steps ('Starting Sub Jobs') {
              build 'JobB'
 } 
-}
-       {
        steps ('Starting Sub Jobs') {
    build 'JobC'
 }
-}
-    }
   }
     stage('Test') {
       steps {
