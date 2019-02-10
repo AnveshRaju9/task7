@@ -3,7 +3,7 @@ pipeline
   agent any
   stages 
   {
-    stage('Build') 
+    stage "Build" 
     {
         steps ('Starting Jobs')
         {
@@ -18,14 +18,14 @@ pipeline
           build 'JobC'
         }
     }
-    stage('Test') 
+    stage "Test" 
     {
       steps('testt')
       {
         echo 'Testing..'
       }
     }
-    stage('Deploy') 
+    stage "Deploy" 
     {
       steps 
       {
