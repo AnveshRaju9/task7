@@ -2,7 +2,7 @@ pipeline
 {
   agent any
   triggers {
-       upstream 'firstjob, First-job'
+       upstream 'firstjob, First-job,'
   }
   stages 
   {
@@ -13,15 +13,4 @@ pipeline
           }
     }
   }
-triggers {
-       downstream 'secondjob, Second-job'
-}
-stages {
-  stage ('SECOND-JOB')
-  {
-    steps {
-      echo 'https://github.com/AnveshRaju9/task7.git'
-          }
-  }
-}
 }
