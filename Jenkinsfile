@@ -8,12 +8,17 @@ pipeline {
         echo 'Building..'
       }
       {
-          stage ('Starting Sub Jobs') {
+        steps ('Starting Jobs'){
+          build 'JobA'
+        }
+      }
+      {
+          steps ('Starting Sub Jobs') {
              build 'JobB'
 } 
 }
        {
-       stage ('Starting Sub Jobs') {
+       steps ('Starting Sub Jobs') {
    build 'JobC'
 }
 }
