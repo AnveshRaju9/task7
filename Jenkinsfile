@@ -12,5 +12,11 @@ pipeline
         echo 'https://github.com/AnveshRaju9/task7.git'
           }
     }
+    stage('Example')
+    {
+      steps {
+          echo 'Hello World'
+      }
+    }
   }
 }
